@@ -6,6 +6,7 @@
 file_put_contents("php://stderr", "sending push !!!".PHP_EOL);
 $json = [];
 $json['response'] = '<div class=\"contact_answer\"><h2>Thank you for contacting us. Your request will be reviewed shortly.</h2></div>';
+header('Content-Type: application/json');
 $jsonstring = json_encode($json);
         echo $jsonstring;
 ?>
