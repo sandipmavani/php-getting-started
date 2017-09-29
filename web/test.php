@@ -5,9 +5,9 @@
 //print_r($_FILES);
 file_put_contents("php://stderr", "sending push !!!".PHP_EOL);
 $string = "";
-$string .="Name :".$_GET['name']."                                         \n";
-$string .="Email :".$_GET['email']."                                         \n";
-$string .="Message :".$_GET['text']."                                         \n";
+$string .="Name :".$_POST['name']."                                         \n";
+$string .="Email :".$_POST['email']."                                         \n";
+$string .="Message :".$_POST['text']."                                         \n";
 $ch = curl_init("https://slack.com/api/chat.postMessage");
 $data = http_build_query([
     "token" => "xoxp-182706105361-184074073622-185786601942-441527597eb23679a645c26abc5467d7",
